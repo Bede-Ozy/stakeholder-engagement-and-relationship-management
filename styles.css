@@ -338,6 +338,7 @@ html, body {
   cursor: pointer;
   transition: all var(--transition-fast);
   user-select: none;
+  text-decoration: none;
 }
 
 .hud-btn:hover {
