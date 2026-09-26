@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stakeholder Engagement & Relationship Management in the Civil Service</title>
+  <meta name="description" content="A premium 16-slide conference presentation deck for civil servants, public-sector managers, and administrators on mastering administrative procedures and emotional intelligence for decision making.">
+  
+  <!-- Modern Google Fonts: Outfit (Display & Headlines), Plus Jakarta Sans (Body & Labels), JetBrains Mono (Codes & Metrics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+  <!-- TOP BAR GRADIENT RUNNER (Reflecting the template style) -->
+  <div class="deck-top-gradient" id="deckTopGradient" aria-hidden="true"></div>
+
+  <!-- MAIN PRESENTATION WRAPPER -->
+  <div class="presentation-wrapper" id="presentationWrapper">
+
+    <!-- TOP HOVER SENSOR ZONE (Trigger area to slide down HUD) -->
+    <div class="hud-hover-zone" id="hudHoverZone" aria-hidden="true"></div>
+
+    <!-- FLOATING TOP NAVIGATION HUD (Reveals on hover) -->
+    <header class="presentation-hud" id="presentationHud">
+      <div class="hud-left">
+        <span class="hud-badge">EXECUTIVE MASTERCLASS</span>
+        <span class="hud-divider">|</span>
+        <span class="hud-topic">Civil Service Leadership</span>
+      </div>
+
+      <div class="hud-right">
+        <!-- Rehearsal Timer -->
+        <div class="timer-widget" id="timerWidget" title="Elapsed Presentation Timer (Click to Pause/Resume)">
+          <svg class="hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span id="timerDisplay">00:00</span>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button class="hud-btn" id="themeToggleBtn" title="Switch Theme (Dark Navy / Template White)">
+          <svg class="hud-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="hud-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <!-- Toggle Screen Size / Fullscreen Button -->
+        <button class="hud-btn hud-btn-accent" id="fullscreenBtn" title="Toggle Fullscreen / Zoom Mode (Shortcut: F)">
+          <svg class="hud-icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          <svg class="hud-icon icon-compress" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M4 14h6m0 0v6m0-6L3 21m17-7h-6m0 0v6m0-6l7 7M10 4v6m0 0H4m6 0L3 3m10 7h6m-6 0V4m0 6l7-7"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- SLIDE STAGE CONTAINER (Responsive 16:9 Aspect Ratio) -->
+    <main class="slide-stage" id="slideStage">
+
+      <!-- AMBIENT LIVING CANVAS BACKDROP -->
+      <div class="canvas-ambient-backdrop" id="canvasAmbientBackdrop" aria-hidden="true">
+        <div class="ambient-glow ambient-orb-1"></div>
+        <div class="ambient-glow ambient-orb-2"></div>
+        <div class="ambient-dots-layer"></div>
+        <div class="ambient-grid-lines"></div>
+        <canvas id="ambientNodesCanvas" class="ambient-nodes-canvas"></canvas>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 1: TITLE SLIDE                       -->
+      <!-- ========================================== -->
+      <section class="slide-card active" id="slide-1" data-slide="1">
+        <div class="slide-content slide-title-layout">
+          <div class="title-meta-badge">
+            <span class="dot-live"></span>
+            <span>NATIONAL PUBLIC SERVICE LEADERSHIP CONFERENCE</span>
+          </div>
+
+          <h1 class="title-main">
+            Stakeholder Engagement <br>& Relationship Management
+          </h1>
+
+          <div class="title-sub-headline">
+            IN THE CIVIL SERVICE
+          </div>
+
+          <p class="title-value-prop">
+            Building trust. Managing relationships. Making better decisions.
+          </p>
+
+          <!-- 4 Pillars Core Formula Banner -->
+          <div class="title-pillars-bar">
+            <div class="pillar-tag">
+              <span class="pillar-icon">⚖️</span>
+              <span>Administrative Procedures</span>
+            </div>
+            <span class="pillar-plus">+</span>
+            <div class="pillar-tag">
+              <span class="pillar-icon">🤝</span>
+              <span>Stakeholder Engagement</span>
+            </div>
+            <span class="pillar-plus">+</span>
+            <div class="pillar-tag">
+              <span class="pillar-icon">🧠</span>
+              <span>Emotional Intelligence</span>
+            </div>
+            <span class="pillar-plus">+</span>
+            <div class="pillar-tag">
+              <span class="pillar-icon">🎯</span>
+              <span>Decision Making</span>
+            </div>
+          </div>
+
+          <div class="title-footer-note">
+            <span>Mastering Administrative Procedures & Emotional Intelligence for Decision Making</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 2: THE REAL CHALLENGE                -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-2" data-slide="2">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">EXECUTIVE REALITY</span>
+            <h2 class="slide-headline">A GOOD DECISION CAN STILL FAIL.</h2>
+          </div>
+
+          <!-- Problem Flow Diagram -->
+          <div class="flow-diagram-container">
+            <div class="flow-step-card">
+              <div class="step-num">01</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="step-text">Wrong people consulted</div>
+            </div>
+
+            <div class="flow-arrow-divider">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="flow-step-card">
+              <div class="step-num">02</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              </div>
+              <div class="step-text">Concerns ignored</div>
+            </div>
+
+            <div class="flow-arrow-divider">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="flow-step-card">
+              <div class="step-num">03</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="step-text">Expectations unmanaged</div>
+            </div>
+
+            <div class="flow-arrow-divider">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="flow-step-card">
+              <div class="step-num">04</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/><path d="M22 12h-4"/></svg>
+              </div>
+              <div class="step-text">Communication delayed</div>
+            </div>
+
+            <div class="flow-arrow-divider">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="flow-step-card flow-step-critical">
+              <div class="step-num">05</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </div>
+              <div class="step-text">Implementation problems</div>
+            </div>
+          </div>
+
+          <!-- Bottom Impact Statement -->
+          <div class="slide-callout-banner challenge-banner">
+            <div class="callout-symbol">≠</div>
+            <div class="callout-text-group">
+              <h3 class="callout-title">Decision ≠ Implementation</h3>
+              <p class="callout-desc">Flawless administrative intent collapses when the stakeholders tasked with execution are treated as an afterthought.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 3: WHO IS A STAKEHOLDER?             -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-3" data-slide="3">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">ECOSYSTEM MAPPING</span>
+            <h2 class="slide-headline">Anyone Who Can Affect or Be Affected.</h2>
+          </div>
+
+          <!-- 4-Quadrant Stakeholder Ecosystem -->
+          <div class="ecosystem-layout">
+            <!-- Left Column: Internal & Government -->
+            <div class="ecosystem-col">
+              <div class="stakeholder-card card-internal">
+                <div class="card-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="card-details">
+                  <h3 class="card-title">INTERNAL</h3>
+                  <div class="card-tags">
+                    <span class="stakeholder-chip">Civil Servants</span>
+                    <span class="stakeholder-chip">Managers</span>
+                    <span class="stakeholder-chip">Departments</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stakeholder-card card-government">
+                <div class="card-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 2L2 7h20L12 2z"/></svg>
+                </div>
+                <div class="card-details">
+                  <h3 class="card-title">GOVERNMENT</h3>
+                  <div class="card-tags">
+                    <span class="stakeholder-chip">MDAs</span>
+                    <span class="stakeholder-chip">Regulators</span>
+                    <span class="stakeholder-chip">Legislators</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Central Node -->
+            <div class="ecosystem-center">
+              <div class="center-pulse-ring"></div>
+              <div class="center-core">
+                <span class="core-label">PUBLIC SERVICE</span>
+                <span class="core-title">STAKEHOLDER</span>
+                <span class="core-sub">Core Ecosystem</span>
+              </div>
+            </div>
+
+            <!-- Right Column: External & Implementers -->
+            <div class="ecosystem-col">
+              <div class="stakeholder-card card-external">
+                <div class="card-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="card-details">
+                  <h3 class="card-title">EXTERNAL</h3>
+                  <div class="card-tags">
+                    <span class="stakeholder-chip">Citizens</span>
+                    <span class="stakeholder-chip">Communities</span>
+                    <span class="stakeholder-chip">Businesses</span>
+                    <span class="stakeholder-chip">CSOs</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stakeholder-card card-implementers">
+                <div class="card-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <div class="card-details">
+                  <h3 class="card-title">IMPLEMENTERS</h3>
+                  <div class="card-tags">
+                    <span class="stakeholder-chip">Contractors</span>
+                    <span class="stakeholder-chip">Partners</span>
+                    <span class="stakeholder-chip">Service Providers</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 4: ENGAGEMENT IS A SPECTRUM          -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-4" data-slide="4">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">ENGAGEMENT ARCHITECTURE</span>
+            <h2 class="slide-headline">INFORM → CONSULT → INVOLVE → COLLABORATE</h2>
+          </div>
+
+          <!-- 4-Stage Horizontal Progression -->
+          <div class="spectrum-container">
+            <div class="spectrum-stage stage-inform">
+              <div class="stage-level">LEVEL 1</div>
+              <div class="stage-header">
+                <span class="stage-name">INFORM</span>
+                <span class="stage-flow-tag">One-Way</span>
+              </div>
+              <div class="stage-quote">“We’re doing this.”</div>
+              <p class="stage-description">Clear notices, gazettes, policy announcements, transparent information sharing.</p>
+              <div class="stage-meter meter-1"></div>
+            </div>
+
+            <div class="spectrum-stage stage-consult">
+              <div class="stage-level">LEVEL 2</div>
+              <div class="stage-header">
+                <span class="stage-name">CONSULT</span>
+                <span class="stage-flow-tag">Two-Way</span>
+              </div>
+              <div class="stage-quote">“What do you think?”</div>
+              <p class="stage-description">Public hearings, memorandums, citizen surveys, structured MDA feedback.</p>
+              <div class="stage-meter meter-2"></div>
+            </div>
+
+            <div class="spectrum-stage stage-involve">
+              <div class="stage-level">LEVEL 3</div>
+              <div class="stage-header">
+                <span class="stage-name">INVOLVE</span>
+                <span class="stage-flow-tag">Interactive</span>
+              </div>
+              <div class="stage-quote">“Let’s work through it.”</div>
+              <p class="stage-description">Multi-stakeholder roundtables, technical workshops, working groups.</p>
+              <div class="stage-meter meter-3"></div>
+            </div>
+
+            <div class="spectrum-stage stage-collaborate">
+              <div class="stage-level">LEVEL 4</div>
+              <div class="stage-header">
+                <span class="stage-name">COLLABORATE</span>
+                <span class="stage-flow-tag">Co-Ownership</span>
+              </div>
+              <div class="stage-quote">“Let’s build it together.”</div>
+              <p class="stage-description">Joint implementation taskforces, shared accountability, co-design.</p>
+              <div class="stage-meter meter-4"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Highlight Banner -->
+          <div class="spectrum-banner">
+            <svg class="banner-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span class="banner-quote">“Not every stakeholder needs the same level of engagement.”</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 5: MAP YOUR STAKEHOLDERS             -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-5" data-slide="5">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">STRATEGIC PRIORITISATION</span>
+            <h2 class="slide-headline">POWER × INTEREST MATRIX</h2>
+          </div>
+
+          <!-- 2x2 Matrix Grid -->
+          <div class="matrix-wrapper">
+            <div class="matrix-y-axis">
+              <span class="axis-arrow-up">▲</span>
+              <span class="axis-text">POWER / INFLUENCE</span>
+            </div>
+
+            <div class="matrix-grid">
+              <!-- Top Left: High Power / Low Interest -->
+              <div class="matrix-quadrant quad-keep-satisfied">
+                <div class="quad-badge">HIGH POWER • LOW INTEREST</div>
+                <h3 class="quad-action">KEEP SATISFIED</h3>
+                <p class="quad-desc">Engage proactively, meet institutional requirements, prevent sudden escalations.</p>
+                <div class="quad-example">e.g., Central Regulators, Oversight Committees, Treasury</div>
+              </div>
+
+              <!-- Top Right: High Power / High Interest -->
+              <div class="matrix-quadrant quad-manage-closely">
+                <div class="quad-badge quad-badge-priority">HIGH POWER • HIGH INTEREST</div>
+                <h3 class="quad-action">MANAGE CLOSELY</h3>
+                <p class="quad-desc">Key decision-makers, continuous dialogue, regular joint reviews, co-design.</p>
+                <div class="quad-example">e.g., Line Ministers, Permanent Secretaries, Impacted Communities</div>
+              </div>
+
+              <!-- Bottom Left: Low Power / Low Interest -->
+              <div class="matrix-quadrant quad-monitor">
+                <div class="quad-badge">LOW POWER • LOW INTEREST</div>
+                <h3 class="quad-action">MONITOR</h3>
+                <p class="quad-desc">General communications, observe sentiment changes, minimal administrative overhead.</p>
+                <div class="quad-example">e.g., Unaffected public, peripheral suppliers</div>
+              </div>
+
+              <!-- Bottom Right: Low Power / High Interest -->
+              <div class="matrix-quadrant quad-keep-informed">
+                <div class="quad-badge">LOW POWER • HIGH INTEREST</div>
+                <h3 class="quad-action">KEEP INFORMED</h3>
+                <p class="quad-desc">Empathetic consultation, clear updates, address legitimate operational concerns early.</p>
+                <div class="quad-example">e.g., Frontline Field Officers, Civil Society Advocates, End Users</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="matrix-x-axis">
+            <span class="axis-text">INTEREST / STAKE</span>
+            <span class="axis-arrow-right">▶</span>
+          </div>
+
+          <!-- Bottom Prompt -->
+          <div class="matrix-footer-prompt">
+            <span class="prompt-title">Before engaging, ask:</span>
+            <span class="prompt-triad"><strong>Who matters?</strong> • <strong>Why do they matter?</strong> • <strong>What do they need?</strong></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 6: DON'T STOP AT POSITIONS           -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-6" data-slide="6">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">NEGOTIATION & ALIGNMENT</span>
+            <h2 class="slide-headline">POSITION ≠ INTEREST</h2>
+          </div>
+
+          <!-- Layered Depth Funnel Diagram -->
+          <div class="funnel-container">
+            <!-- Tier 1: Surface Position -->
+            <div class="funnel-tier tier-position">
+              <div class="tier-indicator">SURFACE POSITION</div>
+              <div class="tier-dialogue">“I DON’T SUPPORT THIS POLICY.”</div>
+              <div class="tier-tag">What is stated publicly</div>
+            </div>
+
+            <!-- Funnel Connector -->
+            <div class="funnel-connector">
+              <span class="funnel-probe">WHY?</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="7 10 12 15 17 10"/></svg>
+            </div>
+
+            <!-- Tier 2: Real Operational Concern -->
+            <div class="funnel-tier tier-concern">
+              <div class="tier-indicator">OPERATIONAL CONCERN</div>
+              <div class="tier-dialogue">“My department will carry the implementation risk.”</div>
+              <div class="tier-tag">The anxiety beneath the resistance</div>
+            </div>
+
+            <!-- Funnel Connector -->
+            <div class="funnel-connector">
+              <span class="funnel-probe">DEEPER DIAGNOSIS</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="7 10 12 15 17 10"/></svg>
+            </div>
+
+            <!-- Tier 3: Underlying Need -->
+            <div class="funnel-tier tier-need">
+              <div class="tier-indicator">UNDERLYING NEED</div>
+              <div class="need-triad">
+                <span class="need-pill">Clarity</span>
+                <span class="need-pill">Resources</span>
+                <span class="need-pill">Accountability</span>
+              </div>
+              <div class="tier-tag">Where collaborative solutions are built</div>
+            </div>
+          </div>
+
+          <!-- Bottom Anchor -->
+          <div class="funnel-bottom-banner">
+            <h3 class="banner-listen">Listen beneath the words.</h3>
+            <p class="banner-subtext">Positions create deadlock. Understanding underlying interests reveals administrative pathways forward.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 7: WHERE EMOTIONAL INTELLIGENCE ENTERS-->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-7" data-slide="7">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">LEADERSHIP MATURITY</span>
+            <h2 class="slide-headline">MANAGE YOURSELF BEFORE MANAGING THE ROOM.</h2>
+          </div>
+
+          <!-- 5-Step EI Pathway Flow -->
+          <div class="ei-pathway-container">
+            <div class="ei-card ei-self-aware">
+              <div class="ei-number">1</div>
+              <h3 class="ei-title">SELF-AWARENESS</h3>
+              <p class="ei-desc">Recognise personal emotional triggers, defensiveness, and cognitive biases.</p>
+            </div>
+
+            <div class="ei-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="ei-card ei-self-control">
+              <div class="ei-number">2</div>
+              <h3 class="ei-title">SELF-CONTROL</h3>
+              <p class="ei-desc">Maintain procedural calm under political tension or hostile scrutiny.</p>
+            </div>
+
+            <div class="ei-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="ei-card ei-empathy">
+              <div class="ei-number">3</div>
+              <h3 class="ei-title">EMPATHY</h3>
+              <p class="ei-desc">Accurately understand the stakeholder's institutional pressures and stakes.</p>
+            </div>
+
+            <div class="ei-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="ei-card ei-social-aware">
+              <div class="ei-number">4</div>
+              <h3 class="ei-title">SOCIAL AWARENESS</h3>
+              <p class="ei-desc">Read power hierarchies, departmental rivalries, and institutional informal networks.</p>
+            </div>
+
+            <div class="ei-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+
+            <div class="ei-card ei-rel-mgmt">
+              <div class="ei-number">5</div>
+              <h3 class="ei-title">RELATIONSHIP MANAGEMENT</h3>
+              <p class="ei-desc">Steer complex discussions toward lawful, productive public value.</p>
+            </div>
+          </div>
+
+          <!-- Bottom Impact Statement -->
+          <div class="ei-bottom-statement">
+            <span class="ei-accent-pill">CORE PRINCIPLE</span>
+            <span class="ei-statement-text">Emotionally intelligent ≠ agreeing with everyone.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 8: THE POWER OF ACTIVE LISTENING     -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-8" data-slide="8">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">ADMINISTRATIVE DIALOGUE</span>
+            <h2 class="slide-headline">LISTEN → CLARIFY → REFLECT → RESPOND</h2>
+          </div>
+
+          <!-- 4 Stages Visual Blocks -->
+          <div class="listening-stages-grid">
+            <div class="listening-card">
+              <div class="listening-step-header">
+                <span class="listening-step-num">STEP 1</span>
+                <span class="listening-step-title">LISTEN</span>
+              </div>
+              <p class="listening-step-desc">Hear without interrupting or formulating immediate institutional defenses.</p>
+            </div>
+
+            <div class="listening-card">
+              <div class="listening-step-header">
+                <span class="listening-step-num">STEP 2</span>
+                <span class="listening-step-title">CLARIFY</span>
+              </div>
+              <p class="listening-step-desc">Ask diagnostic questions to unpack technical, budgetary, or operational ambiguities.</p>
+            </div>
+
+            <div class="listening-card">
+              <div class="listening-step-header">
+                <span class="listening-step-num">STEP 3</span>
+                <span class="listening-step-title">REFLECT</span>
+              </div>
+              <p class="listening-step-desc">Restate their core concerns to confirm accurate understanding before formulating policy.</p>
+            </div>
+
+            <div class="listening-card">
+              <div class="listening-step-header">
+                <span class="listening-step-num">STEP 4</span>
+                <span class="listening-step-title">RESPOND</span>
+              </div>
+              <p class="listening-step-desc">Present a clear, evidence-based administrative position anchored in procedure.</p>
+            </div>
+          </div>
+
+          <!-- Visual Example Comparison -->
+          <div class="dialogue-contrast-box">
+            <div class="contrast-col contrast-wrong">
+              <span class="contrast-label">INSTEAD OF:</span>
+              <div class="contrast-quote">“That’s not possible.”</div>
+              <span class="contrast-effect">Breeds cynicism &amp; resistance</span>
+            </div>
+
+            <div class="contrast-divider">
+              <span>VS</span>
+            </div>
+
+            <div class="contrast-col contrast-right">
+              <span class="contrast-label">USE:</span>
+              <div class="contrast-quote">“What specifically concerns you about the proposal?”</div>
+              <span class="contrast-effect">Reveals actionable obstacles &amp; invites dialogue</span>
+            </div>
+          </div>
+
+          <!-- Bottom Triad Anchor -->
+          <div class="listening-footer-triad">
+            <span class="triad-kicker">Listen for:</span>
+            <span class="triad-item">What they say</span>
+            <span class="triad-dot">•</span>
+            <span class="triad-item">What they mean</span>
+            <span class="triad-dot">•</span>
+            <span class="triad-item">What they need</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 9: WHEN STAKEHOLDERS BECOME DIFFICULT-->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-9" data-slide="9">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">CONFLICT DE-ESCALATION</span>
+            <h2 class="slide-headline">DON'T LABEL. DIAGNOSE.</h2>
+          </div>
+
+          <!-- 5 Diagnostic Strategy Cards -->
+          <div class="difficult-cards-grid">
+            <div class="diag-card card-angry">
+              <div class="diag-badge badge-angry">ANGRY</div>
+              <div class="diag-action">→ De-escalate</div>
+              <p class="diag-detail">Lower your vocal pitch, validate frustration without admitting liability, separate emotion from administrative facts.</p>
+            </div>
+
+            <div class="diag-card card-resistant">
+              <div class="diag-badge badge-resistant">RESISTANT</div>
+              <div class="diag-action">→ Understand the concern</div>
+              <p class="diag-detail">Probe for past institutional letdowns, loss of departmental turf, or genuine resource deficit.</p>
+            </div>
+
+            <div class="diag-card card-silent">
+              <div class="diag-badge badge-silent">SILENT</div>
+              <div class="diag-action">→ Create space</div>
+              <p class="diag-detail">Invite structured offline input, ask direct open-ended questions, protect junior officers from pressure.</p>
+            </div>
+
+            <div class="diag-card card-dominant">
+              <div class="diag-badge badge-dominant">DOMINANT</div>
+              <div class="diag-action">→ Structure conversation</div>
+              <p class="diag-detail">Enforce meeting standing orders, implement strict time allocations, redirect focus back to the collective agenda.</p>
+            </div>
+
+            <div class="diag-card card-unreasonable">
+              <div class="diag-badge badge-unreasonable">UNREASONABLE</div>
+              <div class="diag-action">→ Set boundaries</div>
+              <p class="diag-detail">Anchor firmly on Public Service Rules, statutory mandates, legal remits, and documented service standards.</p>
+            </div>
+          </div>
+
+          <!-- Bottom Maxim -->
+          <div class="difficult-bottom-banner">
+            <svg class="banner-icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span class="banner-maxim-text">Don’t match emotional intensity with emotional intensity.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 10: MANAGING DISAGREEMENT             -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-10" data-slide="10">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">CONSTRUCTIVE DELIBERATION</span>
+            <h2 class="slide-headline">MOVE FROM POSITIONS → INTERESTS</h2>
+          </div>
+
+          <!-- Conversation Flow Stairs -->
+          <div class="conversation-flow-stairs">
+            <div class="conv-node node-no">
+              <div class="conv-step-badge">STEP 1</div>
+              <div class="conv-speech">“NO.”</div>
+              <div class="conv-note">Positional Defense</div>
+            </div>
+
+            <div class="conv-arrow-down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </div>
+
+            <div class="conv-node node-why">
+              <div class="conv-step-badge">STEP 2</div>
+              <div class="conv-speech">“WHY?”</div>
+              <div class="conv-note">Curious Diagnostic Inquiry</div>
+            </div>
+
+            <div class="conv-arrow-down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </div>
+
+            <div class="conv-node node-concerns">
+              <div class="conv-step-badge">STEP 3</div>
+              <div class="conv-speech">“WHAT CONCERNS YOU?”</div>
+              <div class="conv-note">Unpacking Underlying Risk</div>
+            </div>
+
+            <div class="conv-arrow-down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </div>
+
+            <div class="conv-node node-solution">
+              <div class="conv-step-badge">STEP 4</div>
+              <div class="conv-speech">“WHAT WOULD ADDRESS THAT CONCERN?”</div>
+              <div class="conv-note">Co-Creating the Administrative Solution</div>
+            </div>
+          </div>
+
+          <!-- Bottom Dual Statement -->
+          <div class="disagreement-dual-banner">
+            <div class="dual-item">
+              <span class="dual-icon">✕</span>
+              <span>The goal isn’t to eliminate disagreement.</span>
+            </div>
+            <div class="dual-divider">|</div>
+            <div class="dual-item dual-item-primary">
+              <span class="dual-icon">✓</span>
+              <span>Make disagreement productive.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 11: STAKEHOLDERS & DECISION MAKING   -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-11" data-slide="11">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">DECISION-MAKING FILTER</span>
+            <h2 class="slide-headline">BEFORE YOU DECIDE, ASK:</h2>
+          </div>
+
+          <!-- 6 Clean Diagnostic Cards -->
+          <div class="decision-grid-container">
+            <div class="decision-card">
+              <div class="decision-tag">WHO?</div>
+              <h3 class="decision-question">Who will be affected?</h3>
+              <p class="decision-sub">Direct, indirect, and future beneficiaries or vulnerable groups.</p>
+            </div>
+
+            <div class="decision-card">
+              <div class="decision-tag">WHY?</div>
+              <h3 class="decision-question">What are their interests?</h3>
+              <p class="decision-sub">Motivations, priorities, institutional survival, and citizen stakes.</p>
+            </div>
+
+            <div class="decision-card">
+              <div class="decision-tag">WHAT?</div>
+              <h3 class="decision-question">What evidence do we have?</h3>
+              <p class="decision-sub">Data, verifiable metrics, administrative precedents, and field feedback.</p>
+            </div>
+
+            <div class="decision-card">
+              <div class="decision-tag">RISK?</div>
+              <h3 class="decision-question">What could go wrong?</h3>
+              <p class="decision-sub">Operational bottlenecks, political fallout, resistance, unintended consequences.</p>
+            </div>
+
+            <div class="decision-card">
+              <div class="decision-tag">RULES?</div>
+              <h3 class="decision-question">What does procedure require?</h3>
+              <p class="decision-sub">Public Service Rules, procurement guidelines, statutory authorities.</p>
+            </div>
+
+            <div class="decision-card">
+              <div class="decision-tag">IMPLEMENTATION?</div>
+              <h3 class="decision-question">Can this actually work?</h3>
+              <p class="decision-sub">Budgetary backing, departmental capacity, field-level practicality.</p>
+            </div>
+          </div>
+
+          <!-- Convergence Banner -->
+          <div class="convergence-result-bar">
+            <div class="convergence-arrow-group">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="convergence-title">BETTER DECISION</div>
+            <div class="convergence-triad">Legitimate • Implementable • Sustainable</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 12: THE TRUST EQUATION               -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-12" data-slide="12">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">INSTITUTIONAL CURRENCY</span>
+            <h2 class="slide-headline">THE TRUST EQUATION</h2>
+          </div>
+
+          <!-- Equation Display -->
+          <div class="equation-layout">
+            <div class="equation-term">
+              <div class="term-box">
+                <span class="term-name">COMPETENCE</span>
+                <span class="term-metric">Technical &amp; Policy Delivery</span>
+              </div>
+            </div>
+
+            <span class="equation-operator">×</span>
+
+            <div class="equation-term">
+              <div class="term-box">
+                <span class="term-name">FAIRNESS</span>
+                <span class="term-metric">Impartiality &amp; Equity</span>
+              </div>
+            </div>
+
+            <span class="equation-operator">×</span>
+
+            <div class="equation-term">
+              <div class="term-box">
+                <span class="term-name">TRANSPARENCY</span>
+                <span class="term-metric">Open Rules &amp; Rationale</span>
+              </div>
+            </div>
+
+            <span class="equation-operator">×</span>
+
+            <div class="equation-term">
+              <div class="term-box">
+                <span class="term-name">RESPONSIVENESS</span>
+                <span class="term-metric">Timely Action &amp; Empathy</span>
+              </div>
+            </div>
+
+            <span class="equation-operator">×</span>
+
+            <div class="equation-term">
+              <div class="term-box">
+                <span class="term-name">CONSISTENCY</span>
+                <span class="term-metric">Reliability Over Time</span>
+              </div>
+            </div>
+
+            <span class="equation-operator equation-equals">=</span>
+
+            <div class="equation-result">
+              <div class="result-box">
+                <span class="result-label">OUTCOME</span>
+                <span class="result-value">TRUST</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Impact Rule -->
+          <div class="trust-bottom-rule">
+            <div class="rule-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="rule-text">Every interaction either builds trust or erodes trust.</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 13: THE NIGERIAN CIVIL SERVICE CONTEXT -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-13" data-slide="13">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">INSTITUTIONAL FOUNDATIONS</span>
+            <h2 class="slide-headline">ENGAGEMENT IS PART OF GOOD PUBLIC SERVICE.</h2>
+          </div>
+
+          <!-- 2 Pillars Side-by-Side -->
+          <div class="nigerian-context-grid">
+            <!-- Left Side: Public Service Rules -->
+            <div class="context-pillar pillar-psr">
+              <div class="pillar-header-group">
+                <div class="pillar-insignia">OHCSF</div>
+                <div>
+                  <h3 class="pillar-name">PUBLIC SERVICE RULES</h3>
+                  <span class="pillar-subtitle">Administrative Order &amp; Integrity</span>
+                </div>
+              </div>
+
+              <ul class="pillar-list">
+                <li><span class="bullet-check">✓</span> <strong>Efficiency</strong> — Minimising procedural friction and bureaucratic delay</li>
+                <li><span class="bullet-check">✓</span> <strong>Effectiveness</strong> — Delivering tangible public sector outcomes</li>
+                <li><span class="bullet-check">✓</span> <strong>Performance</strong> — Measuring delivery against national mandates</li>
+                <li><span class="bullet-check">✓</span> <strong>Due Process</strong> — Strict fidelity to legal and procedural standards</li>
+                <li><span class="bullet-check">✓</span> <strong>Probity</strong> — Uncompromising ethics, transparency, and public trust</li>
+              </ul>
+            </div>
+
+            <!-- Right Side: SERVICOM -->
+            <div class="context-pillar pillar-servicom">
+              <div class="pillar-header-group">
+                <div class="pillar-insignia insignia-servicom">SERVICOM</div>
+                <div>
+                  <h3 class="pillar-name">SERVICOM</h3>
+                  <span class="pillar-subtitle">Citizen Service Delivery Compact</span>
+                </div>
+              </div>
+
+              <ul class="pillar-list">
+                <li><span class="bullet-check">✓</span> <strong>Service Standards</strong> — Defining clear, published citizen commitments</li>
+                <li><span class="bullet-check">✓</span> <strong>Citizen Expectations</strong> — Aligning civil service delivery to public needs</li>
+                <li><span class="bullet-check">✓</span> <strong>Complaints</strong> — Robust, non-defensive grievance redress mechanisms</li>
+                <li><span class="bullet-check">✓</span> <strong>Feedback</strong> — Systematic stakeholder data informing reform</li>
+                <li><span class="bullet-check">✓</span> <strong>Service Improvement</strong> — Iterative modernization of MDAs</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Summary Banner -->
+          <div class="context-bottom-banner">
+            <p class="context-maxim">“Good administration must work for people, not only on paper.”</p>
+            <div class="context-source-badge">
+              Sources: OHCSF Public Service Rules; SERVICOM
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 14: THE 5R MODEL (SIGNATURE PLAYBOOK)-->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-14" data-slide="14">
+        <div class="slide-content">
+          <div class="slide-header 5r-header">
+            <span class="slide-kicker kicker-gold">SIGNATURE PLAYBOOK</span>
+            <h1 class="slide-headline headline-5r">THE 5R MODEL</h1>
+            <p class="subheadline-5r">A Practical Stakeholder Management Playbook</p>
+          </div>
+
+          <!-- 5R Stepped Chevron / Cards -->
+          <div class="model-5r-container">
+            <div class="r-card r-card-1">
+              <div class="r-stage-num">R1</div>
+              <h3 class="r-name">RECOGNISE</h3>
+              <div class="r-question">Who matters?</div>
+              <p class="r-desc">Identify statutory authorities, informal power brokers, and vulnerable silent groups.</p>
+            </div>
+
+            <div class="r-flow-arrow">➔</div>
+
+            <div class="r-card r-card-2">
+              <div class="r-stage-num">R2</div>
+              <h3 class="r-name">READ</h3>
+              <div class="r-question">What do they need?</div>
+              <p class="r-desc">Decode hidden departmental risks, emotional anxieties, and real underlying interests.</p>
+            </div>
+
+            <div class="r-flow-arrow">➔</div>
+
+            <div class="r-card r-card-3">
+              <div class="r-stage-num">R3</div>
+              <h3 class="r-name">RELATE</h3>
+              <div class="r-question">How do we build trust?</div>
+              <p class="r-desc">Deploy emotional intelligence, transparent dialogue, and active active listening.</p>
+            </div>
+
+            <div class="r-flow-arrow">➔</div>
+
+            <div class="r-card r-card-4">
+              <div class="r-stage-num">R4</div>
+              <h3 class="r-name">RESPOND</h3>
+              <div class="r-question">How do we engage &amp; decide?</div>
+              <p class="r-desc">Synthesize evidence, adhere to Public Service Rules, and articulate balanced decisions.</p>
+            </div>
+
+            <div class="r-flow-arrow">➔</div>
+
+            <div class="r-card r-card-5">
+              <div class="r-stage-num">R5</div>
+              <h3 class="r-name">REVIEW</h3>
+              <div class="r-question">What did we learn?</div>
+              <p class="r-desc">Assess implementation impact, evaluate stakeholder feedback, and close the loop.</p>
+            </div>
+          </div>
+
+          <!-- 5R Signature Footer Track -->
+          <div class="model-5r-footer-track">
+            <span class="track-step">RECOGNISE</span>
+            <span class="track-arrow">→</span>
+            <span class="track-step">READ</span>
+            <span class="track-arrow">→</span>
+            <span class="track-step">RELATE</span>
+            <span class="track-arrow">→</span>
+            <span class="track-step">RESPOND</span>
+            <span class="track-arrow">→</span>
+            <span class="track-step">REVIEW</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 15: FROM ENGAGEMENT TO ACTION        -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-15" data-slide="15">
+        <div class="slide-content">
+          <div class="slide-header">
+            <span class="slide-kicker">CLOSING THE LOOP</span>
+            <h2 class="slide-headline">AFTER THE MEETING, CLOSE THE LOOP.</h2>
+          </div>
+
+          <!-- 5-Stage Continuous Cycle -->
+          <div class="action-cycle-container">
+            <div class="cycle-step step-listen">
+              <span class="cycle-num">01</span>
+              <span class="cycle-label">LISTEN</span>
+              <span class="cycle-detail">Capture real concerns</span>
+            </div>
+
+            <div class="cycle-connector">→</div>
+
+            <div class="cycle-step step-decide">
+              <span class="cycle-num">02</span>
+              <span class="cycle-label">DECIDE</span>
+              <span class="cycle-detail">Apply rules &amp; judgment</span>
+            </div>
+
+            <div class="cycle-connector">→</div>
+
+            <div class="cycle-step step-communicate">
+              <span class="cycle-num">03</span>
+              <span class="cycle-label">COMMUNICATE</span>
+              <span class="cycle-detail">Share the reasoning</span>
+            </div>
+
+            <div class="cycle-connector">→</div>
+
+            <div class="cycle-step step-act">
+              <span class="cycle-num">04</span>
+              <span class="cycle-label">ACT</span>
+              <span class="cycle-detail">Execute agreed steps</span>
+            </div>
+
+            <div class="cycle-connector">→</div>
+
+            <div class="cycle-step step-followup">
+              <span class="cycle-num">05</span>
+              <span class="cycle-label">FOLLOW UP</span>
+              <span class="cycle-detail">Report back progress</span>
+            </div>
+          </div>
+
+          <!-- Highlight Core Triad Message -->
+          <div class="action-message-box">
+            <div class="action-box-header">Tell stakeholders:</div>
+            <div class="action-triad-cards">
+              <div class="triad-box box-what">
+                <span class="triad-box-title">WHAT</span>
+                <span class="triad-box-desc">was decided</span>
+              </div>
+              <div class="triad-box box-why">
+                <span class="triad-box-title">WHY</span>
+                <span class="triad-box-desc">it was decided</span>
+              </div>
+              <div class="triad-box box-next">
+                <span class="triad-box-title">WHAT</span>
+                <span class="triad-box-desc">happens next</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Continuous Loop Indicator -->
+          <div class="cycle-loop-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            <span>Stakeholder engagement is a continuous institutional discipline, not a one-time conference meeting.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- SLIDE 16: CLOSING                          -->
+      <!-- ========================================== -->
+      <section class="slide-card" id="slide-16" data-slide="16">
+        <div class="slide-content slide-closing-layout">
+          <div class="closing-quote-hero">
+            PEOPLE SUPPORT WHAT THEY UNDERSTAND.
+          </div>
+
+          <!-- 4 Core Pillars of Citizen Experience -->
+          <div class="closing-pillars-row">
+            <div class="closing-pillar-pill">
+              <span class="pill-check">✓</span>
+              <span>HEARD</span>
+            </div>
+            <div class="closing-pillar-pill">
+              <span class="pill-check">✓</span>
+              <span>RESPECTED</span>
+            </div>
+            <div class="closing-pillar-pill">
+              <span class="pill-check">✓</span>
+              <span>FAIRLY TREATED</span>
+            </div>
+            <div class="closing-pillar-pill">
+              <span class="pill-check">✓</span>
+              <span>INFORMED</span>
+            </div>
+          </div>
+
+          <!-- Final Manifesto Stacking Lines -->
+          <div class="closing-manifesto">
+            <div class="manifesto-line">ENGAGE PEOPLE.</div>
+            <div class="manifesto-line">UNDERSTAND INTERESTS.</div>
+            <div class="manifesto-line">MANAGE EMOTIONS.</div>
+            <div class="manifesto-line">RESPECT PROCEDURE.</div>
+            <div class="manifesto-line manifesto-highlight">MAKE BETTER DECISIONS.</div>
+          </div>
+
+          <!-- Closing Acknowledgement & Thank You -->
+          <div class="closing-thanks-bar">
+            <span class="thanks-title">Thank You</span>
+            <span class="thanks-sub">Questions, Reflections &amp; Discussion</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BOTTOM HOVER SENSOR ZONE (Trigger area to highlight Dock) -->
+    <div class="dock-hover-zone" id="dockHoverZone" aria-hidden="true"></div>
+
+    <!-- FLOATING BOTTOM CONTROL DOCK -->
+    <footer class="presentation-dock" id="presentationDock">
+      <div class="dock-left">
+        <button class="nav-btn nav-btn-prev" id="prevBtn" title="Previous Slide (← or PageUp)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          <span>Prev</span>
+        </button>
+      </div>
+
+      <!-- Center Slide Track Bar with clickable pips -->
+      <div class="dock-center">
+        <div class="slide-track" id="slideTrack" title="Slide Progress Indicator">
+          <!-- 16 indicator pips generated dynamically via JS -->
+        </div>
+      </div>
+
+      <div class="dock-right">
+        <button class="nav-btn nav-btn-next" id="nextBtn" title="Next Slide (→ or Space or PageDown)">
+          <span>Next</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- BOTTOM BAR GRADIENT RUNNER (Reflecting the template style) -->
+  <div class="deck-bottom-gradient" id="deckBottomGradient" aria-hidden="true"></div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: SPEAKER NOTES DRAWER (Shortcut: S)  -->
+  <!-- ========================================== -->
+  <div class="drawer-overlay" id="notesDrawerOverlay"></div>
+  <aside class="speaker-notes-drawer" id="speakerNotesDrawer" aria-label="Speaker Notes">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <h3>SPEAKER NOTES</h3>
+      </div>
+      <div class="drawer-actions">
+        <span class="drawer-slide-tag" id="notesSlideTag">SLIDE 01</span>
+        <button class="drawer-close-btn" id="notesCloseBtn" title="Close Notes (Esc)">✕</button>
+      </div>
+    </div>
+    <div class="drawer-body" id="notesBody">
+      <!-- Injected dynamically by app.js based on active slide -->
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- MODAL: SLIDE GRID OVERVIEW (Shortcut: G)   -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="gridModalOverlay">
+    <div class="grid-modal" id="gridModal">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <h2>SLIDE NAVIGATION MATRIX</h2>
+        </div>
+        <button class="modal-close-btn" id="gridCloseBtn" title="Close Overview (Esc)">✕</button>
+      </div>
+      <div class="grid-cards-container" id="gridCardsContainer">
+        <!-- 16 Slide Preview Tiles dynamically generated via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: INSTITUTIONAL REFERENCES (Shortcut: R)-->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="referencesModalOverlay">
+    <div class="references-modal" id="referencesModal">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <h2>STATUTORY &amp; RESEARCH REFERENCES</h2>
+        </div>
+        <button class="modal-close-btn" id="referencesCloseBtn" title="Close References (Esc)">✕</button>
+      </div>
+      <div class="references-body">
+        <div class="ref-section">
+          <h3 class="ref-cat-title">1. Nigerian Public Sector Framework</h3>
+          <div class="ref-item">
+            <span class="ref-source">Office of the Head of the Civil Service of the Federation (OHCSF)</span>
+            <p class="ref-text">Federal Public Service Rules (Revised Edition). Prescribing professional standards, efficiency, probity, meritocracy, and statutory administrative due process across Federal Ministries, Departments, and Agencies (MDAs).</p>
+          </div>
+          <div class="ref-item">
+            <span class="ref-source">SERVICOM Presidency (Service Compact with All Nigerians)</span>
+            <p class="ref-text">Service Charter Guidelines and Citizen Grievance Redress Mechanisms. Benchmarking public sector performance against citizen rights to timely, fair, honest, and effective administrative delivery.</p>
+          </div>
+          <div class="ref-item">
+            <span class="ref-source">Federal Republic of Nigeria</span>
+            <p class="ref-text">Freedom of Information (FOI) Act 2011. Mandating institutional transparency, proactive disclosure of public records, and structured citizen engagement in governance.</p>
+          </div>
+        </div>
+
+        <div class="ref-section">
+          <h3 class="ref-cat-title">2. International Public Governance &amp; Multilateral Standards</h3>
+          <div class="ref-item">
+            <span class="ref-source">OECD (Organisation for Economic Co-operation and Development)</span>
+            <p class="ref-text">Recommendation on Open Government (2017) &amp; Citizen Participation Guidelines (2021). Outlining empirical evidence on how structured stakeholder engagement bolsters public trust, policy legitimacy, and cost-effective implementation.</p>
+          </div>
+          <div class="ref-item">
+            <span class="ref-source">World Bank Group</span>
+            <p class="ref-text">Environmental and Social Framework (ESS10: Stakeholder Engagement and Information Disclosure). Standardizing power-interest diagnostics, vulnerable group consultation, and continuous stakeholder feedback loops in public projects.</p>
+          </div>
+        </div>
+
+        <div class="ref-section">
+          <h3 class="ref-cat-title">3. Behavioral Science, Emotional Intelligence &amp; Decision Theory</h3>
+          <div class="ref-item">
+            <span class="ref-source">Goleman, D. (1998, 2004)</span>
+            <p class="ref-text"><em>Working with Emotional Intelligence</em> &amp; <em>What Makes a Leader?</em> Harvard Business Review. Establishing the 5-domain framework: Self-awareness, Self-regulation, Motivation, Empathy, and Social Skill as the chief determinant of leadership efficacy.</p>
+          </div>
+          <div class="ref-item">
+            <span class="ref-source">Mayer, J. D., Salovey, P., &amp; Caruso, D. R. (2004)</span>
+            <p class="ref-text">“Emotional Intelligence: Theory, Findings, and Implications.” <em>Psychological Inquiry</em>. The four-branch ability model: Perceiving emotions, Facilitating thought, Understanding emotional dynamics, and Managing emotions.</p>
+          </div>
+          <div class="ref-item">
+            <span class="ref-source">Fisher, R., Ury, W., &amp; Patton, B. (Harvard Negotiation Project)</span>
+            <p class="ref-text"><em>Getting to Yes: Negotiating Agreement Without Giving In</em>. Formulating the core distinction between rigid positional bargaining and interest-based consensus building in institutional negotiations.</p>
+          </div>
+          <div class="ref-item">
+            <span class="ref-source">Moore, Mark H. (Harvard Kennedy School)</span>
+            <p class="ref-text"><em>Creating Public Value: Strategic Management in Government</em>. The Strategic Triangle linking Authorizing Environment (stakeholders/rules), Operational Capacity, and Public Value Creation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEYBOARD SHORTCUTS TOAST NOTIFICATION -->
+  <aside class="shortcut-pill" id="shortcutPill" aria-label="Keyboard Shortcuts Hint">
+    <span>Keys: <strong>←</strong> / <strong>→</strong> Navigate • <strong>S</strong> Notes • <strong>G</strong> Grid • <strong>R</strong> Sources • <strong>F</strong> Fullscreen</span>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
