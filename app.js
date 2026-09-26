@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const referencesModalOverlay = document.getElementById('referencesModalOverlay');
   const referencesCloseBtn = document.getElementById('referencesCloseBtn');
 
+  // PPTX Download Modal Elements
+  const downloadPptxBtn = document.getElementById('downloadPptxBtn');
+  const downloadModalOverlay = document.getElementById('downloadModalOverlay');
+  const downloadCloseBtn = document.getElementById('downloadCloseBtn');
+
   // Theme & Fullscreen Elements
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const fullscreenBtn = document.getElementById('fullscreenBtn');
@@ -459,10 +464,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function openDownloadModal() {
+    if (downloadModalOverlay) downloadModalOverlay.classList.add('active');
+  }
+
+  function closeDownloadModal() {
+    if (downloadModalOverlay) downloadModalOverlay.classList.remove('active');
+  }
+
+  function toggleDownloadModal() {
+    if (downloadModalOverlay && downloadModalOverlay.classList.contains('active')) {
+      closeDownloadModal();
+    } else {
+      openDownloadModal();
+    }
+  }
+
   function closeAllModals() {
     closeSpeakerNotes();
     closeGridModal();
     closeReferencesModal();
+    closeDownloadModal();
   }
 
   // ==========================================
@@ -612,6 +634,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // PPTX Download Modal Listeners
+  if (downloadPptxBtn) {
+    downloadPptxBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleDownloadModal();
+    });
+  }
+  if (downloadCloseBtn) downloadCloseBtn.addEventListener('click', closeDownloadModal);
+  if (downloadModalOverlay) {
+    downloadModalOverlay.addEventListener('click', (e) => {
+      if (e.target === downloadModalOverlay) closeDownloadModal();
+    });
+  }
+
   if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
   if (fullscreenBtn) fullscreenBtn.addEventListener('click', toggleFullscreen);
   if (timerWidget) timerWidget.addEventListener('click', toggleTimer);
@@ -661,6 +697,12 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'R':
         e.preventDefault();
         toggleReferencesModal();
+        break;
+
+      case 'd':
+      case 'D':
+        e.preventDefault();
+        toggleDownloadModal();
         break;
 
       case 'f':

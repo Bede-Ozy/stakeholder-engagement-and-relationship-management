@@ -39,11 +39,11 @@
           <span id="timerDisplay">00:00</span>
         </div>
 
-        <!-- Download PPTX Deck Button -->
-        <a href="stakeholder_engagement_masterclass.pptx" download="stakeholder_engagement_masterclass.pptx" class="hud-btn" id="downloadPptxBtn" title="Download PowerPoint Deck (.pptx)">
+        <!-- Download PPTX Deck Button (Triggers Theme Chooser Modal) -->
+        <button class="hud-btn" id="downloadPptxBtn" title="Download PowerPoint Presentation (.pptx) - Choose Dark or Light Theme">
           <svg class="hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>PPTX</span>
-        </a>
+        </button>
 
         <!-- Theme Toggle Button -->
         <button class="hud-btn" id="themeToggleBtn" title="Switch Theme (Dark Navy / Template White)">
@@ -1262,11 +1262,89 @@
         </div>
       </div>
     </div>
+  <!-- ========================================== -->
+  <!-- MODAL: PPTX DOWNLOAD CHOOSER (Dark / Light) -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="downloadModalOverlay">
+    <div class="download-modal" id="downloadModal">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <h2>DOWNLOAD PRESENTATION DECK (.PPTX)</h2>
+        </div>
+        <button class="modal-close-btn" id="downloadCloseBtn" title="Close (Esc)">✕</button>
+      </div>
+
+      <div class="download-modal-body">
+        <p class="download-modal-intro">
+          Choose your visual presentation theme. Both decks feature exact, pixel-perfect 16:9 widescreen snapshots of all 16 live slides, complete with speaker notes.
+        </p>
+
+        <div class="download-theme-cards">
+          <!-- Dark Theme Option Card -->
+          <div class="download-card card-theme-dark">
+            <div class="download-preview-frame frame-dark">
+              <img src="snapshots/slide_dark_01.png" alt="Executive Dark Navy Deck Preview" class="preview-snapshot-img">
+              <div class="preview-overlay-tag">16 Slides • 16:9 • Dark</div>
+            </div>
+            <div class="download-card-info">
+              <div class="card-header-row">
+                <h3 class="download-card-title">Executive Dark Navy</h3>
+                <span class="theme-badge-pill pill-dark">High Impact</span>
+              </div>
+              <p class="download-card-desc">Deep navy canvas (#080D1A) with electric blue accents and flowing gradient runners. Optimal for conference auditoriums, keynotes, and LED displays.</p>
+              <div class="download-card-meta">
+                <span class="meta-tag">7.1 MB</span>
+                <span class="meta-tag">Retina Snapshots</span>
+                <span class="meta-tag">Full Speaker Notes</span>
+              </div>
+              <a href="stakeholder_engagement_dark.pptx" download="stakeholder_engagement_dark.pptx" class="btn-download-deck btn-dark-deck">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download Dark Deck (.pptx)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Light Theme Option Card -->
+          <div class="download-card card-theme-light">
+            <div class="download-preview-frame frame-light">
+              <img src="snapshots/slide_light_01.png" alt="Executive Template White Deck Preview" class="preview-snapshot-img">
+              <div class="preview-overlay-tag">16 Slides • 16:9 • Light</div>
+            </div>
+            <div class="download-card-info">
+              <div class="card-header-row">
+                <h3 class="download-card-title">Executive Template White</h3>
+                <span class="theme-badge-pill pill-light">Print &amp; Handouts</span>
+              </div>
+              <p class="download-card-desc">Crisp white canvas with high-contrast slate typography and top/bottom gradient runners. Ideal for daytime executive briefings, printed binders, and reading.</p>
+              <div class="download-card-meta">
+                <span class="meta-tag">12.4 MB</span>
+                <span class="meta-tag">Retina Snapshots</span>
+                <span class="meta-tag">Full Speaker Notes</span>
+              </div>
+              <a href="stakeholder_engagement_light.pptx" download="stakeholder_engagement_light.pptx" class="btn-download-deck btn-light-deck">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download Light Deck (.pptx)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="download-modal-footer">
+          <div class="deck-specs">
+            <span>✓ 16 Widescreen (16:9) Slides</span>
+            <span>✓ Pixel-Perfect Live Snapshots</span>
+            <span>✓ Complete Speaker Notes Attached</span>
+            <span>✓ PowerPoint &amp; Keynote Compatible</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- KEYBOARD SHORTCUTS TOAST NOTIFICATION -->
   <aside class="shortcut-pill" id="shortcutPill" aria-label="Keyboard Shortcuts Hint">
-    <span>Keys: <strong>←</strong> / <strong>→</strong> Navigate • <strong>S</strong> Notes • <strong>G</strong> Grid • <strong>R</strong> Sources • <strong>F</strong> Fullscreen</span>
+    <span>Keys: <strong>←</strong> / <strong>→</strong> Navigate • <strong>D</strong> PPTX Deck • <strong>S</strong> Notes • <strong>G</strong> Grid • <strong>F</strong> Fullscreen</span>
   </aside>
 
   <script src="app.js"></script>
