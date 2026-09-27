@@ -42,8 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // PPTX Download Modal Elements
   const downloadPptxBtn = document.getElementById('downloadPptxBtn');
+  const dockDownloadBtn = document.getElementById('dockDownloadBtn');
   const downloadModalOverlay = document.getElementById('downloadModalOverlay');
   const downloadCloseBtn = document.getElementById('downloadCloseBtn');
+  const btnDownloadLightDeck = document.getElementById('btnDownloadLightDeck');
+  const btnDownloadDarkDeck = document.getElementById('btnDownloadDarkDeck');
 
   // Theme & Fullscreen Elements
   const themeToggleBtn = document.getElementById('themeToggleBtn');
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: "2-3 Mins",
       takeaway: "Set the executive tone: stakeholder engagement is not political people-pleasing, but a rigorous public-sector administrative discipline.",
       points: [
+        "Facilitator & Lead Speaker: Mr Abayomi Oladipupo Lateef.",
         "Welcome delegates to this National Leadership Masterclass. Establish executive authority immediately.",
         "Emphasize the core thesis: Good policy fails when administrators focus solely on technical brilliance while ignoring the human and institutional ecosystem.",
         "Highlight the 4 foundational pillars: Administrative Procedures + Stakeholder Engagement + Emotional Intelligence + Decision Making.",
@@ -258,13 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
       points: [
         "Deliver the opening truth: 'People support what they understand.' When citizens and staff understand the why, they become co-owners of reform.",
         "Reiterate the 4 conditions: When people feel HEARD, RESPECTED, FAIRLY TREATED, and INFORMED, resistance turns into collaboration.",
-        "Recite the closing manifesto with authority and conviction:",
-        "• ENGAGE PEOPLE.",
-        "• UNDERSTAND INTERESTS.",
-        "• MANAGE EMOTIONS.",
-        "• RESPECT PROCEDURE.",
-        "• MAKE BETTER DECISIONS.",
-        "Conclude and open the floor for executive Q&A, reflections, and panel discussion."
+        "Recite the supporting action commitments leading to the core outcome: (1) Engage People, (2) Understand Interests, (3) Manage Emotions, (4) Respect Procedure → MAKE BETTER DECISIONS.",
+        "Conclude and open the floor for executive Q&A, reflections, and panel discussion with Facilitator Mr Abayomi Oladipupo Lateef."
       ]
     }
   ];
@@ -480,6 +479,126 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Base64 to Blob decoder with chunking for large files
+  function base64ToBlob(base64Data, contentType = 'application/vnd.openxmlformats-officedocument.presentationml.presentation') {
+    const sliceSize = 1024 * 512;
+    const byteCharacters = atob(base64Data);
+    const bytesLength = byteCharacters.length;
+    const slicesCount = Math.ceil(bytesLength / sliceSize);
+    const byteArrays = new Array(slicesCount);
+
+    for (let sliceIndex = 0; sliceIndex < slicesCount; ++sliceIndex) {
+      const begin = sliceIndex * sliceSize;
+      const end = Math.min(begin + sliceSize, bytesLength);
+      const bytes = new Uint8Array(end - begin);
+      for (let offset = begin, i = 0; offset < end; ++i, ++offset) {
+        bytes[i] = byteCharacters.charCodeAt(offset);
+      }
+      byteArrays[sliceIndex] = bytes;
+    }
+    return new Blob(byteArrays, { type: contentType });
+  }
+
+  // Floating Toast Notification
+  function showToast(message, duration = 4000) {
+    let toast = document.getElementById('presentationToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'presentationToast';
+      toast.className = 'presentation-toast';
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = message;
+    toast.classList.add('visible');
+    clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(() => {
+      toast.classList.remove('visible');
+    }, duration);
+  }
+
+  // Universal PPTX Downloader (works on file:// and http://)
+  async function triggerDeckDownload(theme = 'light', btnElement = null) {
+    const filename = theme === 'dark' ? 'stakeholder_engagement_dark.pptx' : 'stakeholder_engagement_light.pptx';
+    const deckLabel = theme === 'dark' ? 'Executive Dark Navy Deck' : 'Executive Light Deck (Preferred)';
+
+    let originalBtnHtml = '';
+    if (btnElement) {
+      originalBtnHtml = btnElement.innerHTML;
+      btnElement.disabled = true;
+      btnElement.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;animation:spin 1s linear infinite;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+        <span>Preparing Download...</span>
+      `;
+    }
+    showToast(`⏳ Preparing <strong>${deckLabel}</strong> (.pptx)...`, 3000);
+
+    try {
+      let blob = null;
+
+      // Check embedded base64 data first (100% reliable on offline file:// protocol)
+      if (window.__DECK_DATA__ && window.__DECK_DATA__[theme]) {
+        blob = base64ToBlob(window.__DECK_DATA__[theme]);
+      } else {
+        // Fallback: try fetching over HTTP
+        try {
+          const resp = await fetch(filename);
+          if (resp.ok) {
+            blob = await resp.blob();
+          }
+        } catch (fetchErr) {
+          console.warn('Direct fetch attempt failed:', fetchErr);
+        }
+      }
+
+      if (blob) {
+        const blobUrl = URL.createObjectURL(blob);
+        const downloadLink = document.createElement('a');
+        downloadLink.style.display = 'none';
+        downloadLink.href = blobUrl;
+        downloadLink.download = filename;
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 20000);
+
+        showToast(`✓ <strong>${deckLabel}</strong> downloaded to your computer!`, 5000);
+
+        if (btnElement) {
+          btnElement.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>✓ Download Started!</span>
+          `;
+          setTimeout(() => {
+            btnElement.disabled = false;
+            btnElement.innerHTML = originalBtnHtml;
+          }, 3000);
+        }
+        return;
+      }
+
+      // Final fallback if blob not available
+      const fallbackA = document.createElement('a');
+      fallbackA.href = filename;
+      fallbackA.download = filename;
+      document.body.appendChild(fallbackA);
+      fallbackA.click();
+      document.body.removeChild(fallbackA);
+
+      showToast(`📁 <strong>${filename}</strong> is also saved in your project folder!`, 5000);
+      if (btnElement) {
+        btnElement.disabled = false;
+        btnElement.innerHTML = originalBtnHtml;
+      }
+    } catch (err) {
+      console.error('Download error:', err);
+      showToast(`📁 File <strong>${filename}</strong> is available directly in this project directory.`, 6000);
+      if (btnElement) {
+        btnElement.disabled = false;
+        btnElement.innerHTML = originalBtnHtml;
+      }
+    }
+  }
+
   function closeAllModals() {
     closeSpeakerNotes();
     closeGridModal();
@@ -488,10 +607,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // THEME SWITCHER (Dark Navy Default / Light Template)
+  // THEME SWITCHER (Light Template Default / Dark Navy Option)
   // ==========================================
   function initTheme() {
-    const savedTheme = localStorage.getItem('cs_deck_theme') || 'dark';
+    const savedTheme = localStorage.getItem('cs_deck_theme') || 'light';
     document.body.setAttribute('data-theme', savedTheme);
   }
 
@@ -639,6 +758,24 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadPptxBtn.addEventListener('click', (e) => {
       e.preventDefault();
       toggleDownloadModal();
+    });
+  }
+  if (dockDownloadBtn) {
+    dockDownloadBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleDownloadModal();
+    });
+  }
+  if (btnDownloadLightDeck) {
+    btnDownloadLightDeck.addEventListener('click', (e) => {
+      e.preventDefault();
+      triggerDeckDownload('light', btnDownloadLightDeck);
+    });
+  }
+  if (btnDownloadDarkDeck) {
+    btnDownloadDarkDeck.addEventListener('click', (e) => {
+      e.preventDefault();
+      triggerDeckDownload('dark', btnDownloadDarkDeck);
     });
   }
   if (downloadCloseBtn) downloadCloseBtn.addEventListener('click', closeDownloadModal);
@@ -801,8 +938,8 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.clearRect(0, 0, width, height);
 
       const isDark = document.body.getAttribute('data-theme') !== 'light';
-      const dotColor = isDark ? 'rgba(56, 189, 248, 0.35)' : 'rgba(2, 132, 199, 0.25)';
-      const lineColorRgb = isDark ? '56, 189, 248' : '2, 132, 199';
+      const dotColor = isDark ? 'rgba(56, 189, 248, 0.35)' : 'rgba(5, 150, 105, 0.28)';
+      const lineColorRgb = isDark ? '56, 189, 248' : '5, 150, 105';
 
       // Update and draw nodes
       for (let i = 0; i < nodes.length; i++) {

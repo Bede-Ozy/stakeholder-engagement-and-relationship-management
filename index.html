@@ -13,7 +13,7 @@
   
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-theme="dark">
+<body data-theme="light">
 
   <!-- TOP BAR GRADIENT RUNNER (Reflecting the template style) -->
   <div class="deck-top-gradient" id="deckTopGradient" aria-hidden="true"></div>
@@ -42,7 +42,7 @@
         <!-- Download PPTX Deck Button (Triggers Theme Chooser Modal) -->
         <button class="hud-btn" id="downloadPptxBtn" title="Download PowerPoint Presentation (.pptx) - Choose Dark or Light Theme">
           <svg class="hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>PPTX</span>
+          <span>Download PPTX</span>
         </button>
 
         <!-- Theme Toggle Button -->
@@ -87,6 +87,15 @@
 
           <div class="title-sub-headline">
             IN THE CIVIL SERVICE
+          </div>
+
+          <!-- Presenter / Facilitator Attribution -->
+          <div class="title-presenter-badge">
+            <span class="presenter-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </span>
+            <span class="presenter-label">FACILITATOR:</span>
+            <span class="presenter-name">Mr Abayomi Oladipupo Lateef</span>
           </div>
 
           <p class="title-value-prop">
@@ -1111,18 +1120,44 @@
             </div>
           </div>
 
-          <!-- Final Manifesto Stacking Lines -->
-          <div class="closing-manifesto">
-            <div class="manifesto-line">ENGAGE PEOPLE.</div>
-            <div class="manifesto-line">UNDERSTAND INTERESTS.</div>
-            <div class="manifesto-line">MANAGE EMOTIONS.</div>
-            <div class="manifesto-line">RESPECT PROCEDURE.</div>
-            <div class="manifesto-line manifesto-highlight">MAKE BETTER DECISIONS.</div>
+          <!-- Supporting Actions Pathway -->
+          <div class="closing-supporting-card">
+            <div class="supporting-card-kicker">STRATEGIC SUPPORTING PILLARS</div>
+            <div class="supporting-steps-row">
+              <div class="supporting-step-item">
+                <span class="supporting-step-num">01</span>
+                <span class="supporting-step-text">Engage People</span>
+              </div>
+              <span class="supporting-step-arrow">→</span>
+              <div class="supporting-step-item">
+                <span class="supporting-step-num">02</span>
+                <span class="supporting-step-text">Understand Interests</span>
+              </div>
+              <span class="supporting-step-arrow">→</span>
+              <div class="supporting-step-item">
+                <span class="supporting-step-num">03</span>
+                <span class="supporting-step-text">Manage Emotions</span>
+              </div>
+              <span class="supporting-step-arrow">→</span>
+              <div class="supporting-step-item">
+                <span class="supporting-step-num">04</span>
+                <span class="supporting-step-text">Respect Procedure</span>
+              </div>
+            </div>
+
+            <div class="supporting-outcome-banner">
+              <span class="outcome-icon">🎯</span>
+              <span class="outcome-text">MAKE BETTER DECISIONS.</span>
+            </div>
           </div>
 
           <!-- Closing Acknowledgement & Thank You -->
           <div class="closing-thanks-bar">
             <span class="thanks-title">Thank You</span>
+            <div class="thanks-facilitator-tag">
+              <span class="tag-role">Facilitator:</span>
+              <span class="tag-name">Mr Abayomi Oladipupo Lateef</span>
+            </div>
             <span class="thanks-sub">Questions, Reflections &amp; Discussion</span>
           </div>
         </div>
@@ -1150,6 +1185,10 @@
       </div>
 
       <div class="dock-right">
+        <button class="nav-btn nav-btn-download" id="dockDownloadBtn" title="Download PowerPoint Presentation (.pptx)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download PPTX</span>
+        </button>
         <button class="nav-btn nav-btn-next" id="nextBtn" title="Next Slide (→ or Space or PageDown)">
           <span>Next</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
@@ -1281,6 +1320,30 @@
         </p>
 
         <div class="download-theme-cards">
+          <!-- Light Theme Option Card (Preferred Theme) -->
+          <div class="download-card card-theme-light">
+            <div class="download-preview-frame frame-light">
+              <img src="snapshots/slide_light_01.png" alt="Executive Emerald & White Deck Preview" class="preview-snapshot-img">
+              <div class="preview-overlay-tag">16 Slides • 16:9 • Light (Preferred)</div>
+            </div>
+            <div class="download-card-info">
+              <div class="card-header-row">
+                <h3 class="download-card-title">Executive Light Deck</h3>
+                <span class="theme-badge-pill pill-light">Client Preferred</span>
+              </div>
+              <p class="download-card-desc">Crisp white canvas with distinguished emerald green accents, green card borders, and top/bottom gradient runners. Ideal for daytime executive briefings, printed binders, and reading.</p>
+              <div class="download-card-meta">
+                <span class="meta-tag">12.4 MB</span>
+                <span class="meta-tag">Retina Snapshots</span>
+                <span class="meta-tag">Full Speaker Notes</span>
+              </div>
+              <button type="button" class="btn-download-deck btn-light-deck" id="btnDownloadLightDeck" title="Download Executive Light Deck (.pptx)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download Light Deck (.pptx)</span>
+              </button>
+            </div>
+          </div>
+
           <!-- Dark Theme Option Card -->
           <div class="download-card card-theme-dark">
             <div class="download-preview-frame frame-dark">
@@ -1294,39 +1357,26 @@
               </div>
               <p class="download-card-desc">Deep navy canvas (#080D1A) with electric blue accents and flowing gradient runners. Optimal for conference auditoriums, keynotes, and LED displays.</p>
               <div class="download-card-meta">
-                <span class="meta-tag">7.1 MB</span>
+                <span class="meta-tag">6.7 MB</span>
                 <span class="meta-tag">Retina Snapshots</span>
                 <span class="meta-tag">Full Speaker Notes</span>
               </div>
-              <a href="stakeholder_engagement_dark.pptx" download="stakeholder_engagement_dark.pptx" class="btn-download-deck btn-dark-deck">
+              <button type="button" class="btn-download-deck btn-dark-deck" id="btnDownloadDarkDeck" title="Download Executive Dark Navy Deck (.pptx)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 <span>Download Dark Deck (.pptx)</span>
-              </a>
+              </button>
             </div>
           </div>
+        </div>
 
-          <!-- Light Theme Option Card -->
-          <div class="download-card card-theme-light">
-            <div class="download-preview-frame frame-light">
-              <img src="snapshots/slide_light_01.png" alt="Executive Template White Deck Preview" class="preview-snapshot-img">
-              <div class="preview-overlay-tag">16 Slides • 16:9 • Light</div>
-            </div>
-            <div class="download-card-info">
-              <div class="card-header-row">
-                <h3 class="download-card-title">Executive Template White</h3>
-                <span class="theme-badge-pill pill-light">Print &amp; Handouts</span>
-              </div>
-              <p class="download-card-desc">Crisp white canvas with high-contrast slate typography and top/bottom gradient runners. Ideal for daytime executive briefings, printed binders, and reading.</p>
-              <div class="download-card-meta">
-                <span class="meta-tag">12.4 MB</span>
-                <span class="meta-tag">Retina Snapshots</span>
-                <span class="meta-tag">Full Speaker Notes</span>
-              </div>
-              <a href="stakeholder_engagement_light.pptx" download="stakeholder_engagement_light.pptx" class="btn-download-deck btn-light-deck">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download Light Deck (.pptx)</span>
-              </a>
-            </div>
+        <!-- Local Project Folder Notice -->
+        <div class="download-local-notice">
+          <div class="local-notice-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="local-notice-text">
+            <strong>Direct Local Files Available:</strong>
+            <span>Both presentation decks (<code>stakeholder_engagement_light.pptx</code> &amp; <code>stakeholder_engagement_dark.pptx</code>) are also stored right inside this project folder on your computer.</span>
           </div>
         </div>
 
@@ -1347,6 +1397,7 @@
     <span>Keys: <strong>←</strong> / <strong>→</strong> Navigate • <strong>D</strong> PPTX Deck • <strong>S</strong> Notes • <strong>G</strong> Grid • <strong>F</strong> Fullscreen</span>
   </aside>
 
+  <script src="deck_data.js" defer></script>
   <script src="app.js"></script>
 </body>
 </html>

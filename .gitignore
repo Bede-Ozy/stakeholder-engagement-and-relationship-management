@@ -1,3 +1,21 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Large generated base64 deck bundle (offline fallback)
+deck_data.js
+
+# Temporary test scripts and download folders
+verify_download.js
+*_downloads/
+scratch_downloads/
+temp_test_download/
+test_downloads/
+test_verify_downloads/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Duplicate 12MB masterclass copy (only light & dark decks needed)
+stakeholder_engagement_masterclass.pptx

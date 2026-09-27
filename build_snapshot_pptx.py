@@ -16,6 +16,7 @@ SPEAKER_NOTES = [
 Set the executive tone: stakeholder engagement is not political people-pleasing, but a rigorous public-sector administrative discipline.
 
 FACILITATOR TALKING POINTS:
+- Facilitator & Lead Speaker: Mr Abayomi Oladipupo Lateef.
 - Welcome delegates to this National Leadership Masterclass. Establish executive authority immediately.
 - Emphasize the core thesis: Good policy fails when administrators focus solely on technical brilliance while ignoring the human and institutional ecosystem.
 - Highlight the 4 foundational pillars: Administrative Procedures + Stakeholder Engagement + Emotional Intelligence + Decision Making.
@@ -169,13 +170,13 @@ Summarize the masterclass into a memorable, inspiring executive leadership charg
 FACILITATOR TALKING POINTS:
 - Deliver the opening truth: 'People support what they understand.'
 - Reiterate the 4 conditions: When people feel HEARD, RESPECTED, FAIRLY TREATED, and INFORMED, resistance turns into collaboration.
-- Recite the closing manifesto with conviction:
-  • ENGAGE PEOPLE.
-  • UNDERSTAND INTERESTS.
-  • MANAGE EMOTIONS.
-  • RESPECT PROCEDURE.
-  • MAKE BETTER DECISIONS.
-- Open the floor for executive Q&A, reflections, and panel discussion.
+- Recite the supporting action commitments leading to the core outcome:
+  • 01. Engage People
+  • 02. Understand Interests
+  • 03. Manage Emotions
+  • 04. Respect Procedure
+  → MAKE BETTER DECISIONS.
+- Open the floor for executive Q&A, reflections, and panel discussion led by Facilitator Mr Abayomi Oladipupo Lateef.
 - Suggested time: 2-3 mins."""
 ]
 
@@ -219,7 +220,7 @@ if __name__ == "__main__":
     build_deck("dark", "stakeholder_engagement_dark.pptx")
     build_deck("light", "stakeholder_engagement_light.pptx")
 
-    # Also make a copy for stakeholder_engagement_masterclass.pptx
+    # Set client-preferred Light Theme as default masterclass copy
     import shutil
-    shutil.copyfile("stakeholder_engagement_dark.pptx", "stakeholder_engagement_masterclass.pptx")
-    print("Copied default to stakeholder_engagement_masterclass.pptx")
+    shutil.copyfile("stakeholder_engagement_light.pptx", "stakeholder_engagement_masterclass.pptx")
+    print("Copied preferred light deck to stakeholder_engagement_masterclass.pptx")

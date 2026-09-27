@@ -117,7 +117,17 @@ def create_deck():
     p_val.font.size = Pt(15)
     p_val.font.color.rgb = TEXT_SUB
     p_val.alignment = PP_ALIGN.CENTER
-    p_val.space_before = Pt(10)
+    p_val.space_before = Pt(8)
+
+    # Presenter / Facilitator Badge
+    tb_pres = s1.shapes.add_textbox(Inches(2.5), Inches(4.0), Inches(8.33), Inches(0.55))
+    tf_pres = tb_pres.text_frame
+    p_pres = tf_pres.paragraphs[0]
+    p_pres.text = "FACILITATOR:  Mr Abayomi Oladipupo Lateef"
+    p_pres.font.size = Pt(13)
+    p_pres.font.bold = True
+    p_pres.font.color.rgb = ACCENT_EMERALD
+    p_pres.alignment = PP_ALIGN.CENTER
 
     # 4 Pillars Box
     p_box = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.5), Inches(4.7), Inches(10.33), Inches(0.85))
@@ -993,35 +1003,62 @@ def create_deck():
     p_w.font.color.rgb = ACCENT_EMERALD
     p_w.alignment = PP_ALIGN.CENTER
 
-    # Manifesto Lines
-    tb_m = s16.shapes.add_textbox(Inches(1.0), Inches(3.2), Inches(11.33), Inches(2.5))
+    # Supporting Strategic Steps Box (Not thick titles!)
+    tb_m = s16.shapes.add_textbox(Inches(1.0), Inches(3.2), Inches(11.33), Inches(2.3))
     tf_m = tb_m.text_frame
-    manifesto = [
-        "ENGAGE PEOPLE.",
-        "UNDERSTAND INTERESTS.",
-        "MANAGE EMOTIONS.",
-        "RESPECT PROCEDURE.",
-        "MAKE BETTER DECISIONS."
-    ]
-    for i, line in enumerate(manifesto):
-        p_m = tf_m.paragraphs[0] if i == 0 else tf_m.add_paragraph()
-        p_m.text = line
-        p_m.font.size = Pt(18 if i < 4 else 22)
-        p_m.font.bold = True
-        p_m.font.color.rgb = ACCENT_BLUE if i == 4 else TEXT_SUB
-        p_m.alignment = PP_ALIGN.CENTER
-        if i > 0:
-            p_m.space_before = Pt(4)
+    
+    p_k = tf_m.paragraphs[0]
+    p_k.text = "STRATEGIC SUPPORTING PILLARS"
+    p_k.font.size = Pt(10)
+    p_k.font.bold = True
+    p_k.font.color.rgb = ACCENT_EMERALD
+    p_k.alignment = PP_ALIGN.CENTER
+    p_k.space_after = Pt(8)
 
-    # Thank you
-    tb_th = s16.shapes.add_textbox(Inches(1.0), Inches(6.0), Inches(11.33), Inches(0.8))
+    supporting_steps = [
+        "01. Engage People",
+        "02. Understand Interests",
+        "03. Manage Emotions",
+        "04. Respect Procedure"
+    ]
+    p_steps = tf_m.add_paragraph()
+    p_steps.text = "    •    ".join(supporting_steps)
+    p_steps.font.size = Pt(13)
+    p_steps.font.bold = False  # Regular weight: clearly supporting the message!
+    p_steps.font.color.rgb = TEXT_SUB
+    p_steps.alignment = PP_ALIGN.CENTER
+    p_steps.space_after = Pt(14)
+
+    p_goal = tf_m.add_paragraph()
+    p_goal.text = "🎯  MAKE BETTER DECISIONS."
+    p_goal.font.size = Pt(20)
+    p_goal.font.bold = True
+    p_goal.font.color.rgb = ACCENT_EMERALD
+    p_goal.alignment = PP_ALIGN.CENTER
+
+    # Thank you & Facilitator Credit
+    tb_th = s16.shapes.add_textbox(Inches(1.0), Inches(5.8), Inches(11.33), Inches(1.1))
     tf_th = tb_th.text_frame
     p_th = tf_th.paragraphs[0]
-    p_th.text = "Thank You\nQuestions, Reflections & Leadership Discussion"
-    p_th.font.size = Pt(13)
+    p_th.text = "Thank You"
+    p_th.font.size = Pt(18)
     p_th.font.bold = True
-    p_th.font.color.rgb = TEXT_DIM
+    p_th.font.color.rgb = TEXT_MAIN
     p_th.alignment = PP_ALIGN.CENTER
+
+    p_f = tf_th.add_paragraph()
+    p_f.text = "Facilitator: Mr Abayomi Oladipupo Lateef"
+    p_f.font.size = Pt(12)
+    p_f.font.bold = True
+    p_f.font.color.rgb = ACCENT_EMERALD
+    p_f.alignment = PP_ALIGN.CENTER
+    p_f.space_before = Pt(3)
+
+    p_sub = tf_th.add_paragraph()
+    p_sub.text = "Questions, Reflections & Leadership Discussion"
+    p_sub.font.size = Pt(11)
+    p_sub.font.color.rgb = TEXT_DIM
+    p_sub.alignment = PP_ALIGN.CENTER
 
     set_notes(s16, "EXECUTIVE CORE TAKEAWAY:\nSummarize the masterclass into a memorable, inspiring executive leadership charge.\n\nFACILITATOR TALKING POINTS:\n- Reiterate the 4 conditions: Heard, Respected, Fairly Treated, Informed.\n- Deliver the closing manifesto with conviction:\n  • ENGAGE PEOPLE.\n  • UNDERSTAND INTERESTS.\n  • MANAGE EMOTIONS.\n  • RESPECT PROCEDURE.\n  • MAKE BETTER DECISIONS.\n- Open the floor for executive Q&A and discussion.\n- Suggested time: 2-3 mins.")
 
